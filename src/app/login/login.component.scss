@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+@keyframes floating {
+    0% {left:0rem; top:0rem; right:0rem; bottom:0rem;}
+    25% {left:.2rem; top:0rem; right:0rem; bottom:.2rem;}
+    50% {left:.4rem; top:0rem; right:0rem; bottom:0rem;}
+    75% {left:.2rem; top:.2rem; right:0rem; bottom:0rem;}
+    100% {left:0rem; top:0rem; right:0rem; bottom:0rem;}
+}
+
+$tablet: 534px;
+$desktop: 700px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+main {
+    position: relative;
+    height: 44rem;
+    overflow: hidden !important;
+}
+div.modal-content {
+    width: 23rem;
+    background-color: #85e6ffab;
+    * {
+        color: white;
+    }
+    .loginErrors {
+        color: #00ffef;
+        margin-left: 1rem;
+    }
+    form>.modal-body>.form-group>input {
+        color: gray;
+    }
+}
+div.modal-footer {
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+
+    span>a {
+        cursor: pointer;
+    }
+    button.btn-primary {
+        background-color: #85e6ffab;
+        border-color: #85e6ffab;
+    }
+}
+// #d7d7ff
+// #d7d7ffad
+// #85e6ffab
+.extraFireflies {
+    visibility: hidden;
+    z-index: -2;
+    @include desktop {
+        visibility: visible;
+        z-index: -1;
+    }
+}
+header {
+    h1 {
+        position: absolute;
+        color: white;
+        top: 12rem;
+        left: 9rem;
+        cursor: pointer;
+        @include tablet {
+            left: 13rem;
+        }
+        @include desktop {
+            left: 10rem;
+            top: 8rem;
+            font-size: 4rem;
+        }
+    }
+}
+#fireflies {
+    height: inherit;
+}
+.fireflies {
+    width: 6rem;
+    margin-top: 3.7rem;
+    z-index: -1;
+
+    @include tablet {
+        margin-top: 4.7rem;
+    }
+    @include desktop {
+        margin-top: 6.7rem;
+    }
+}
+@for $i from 1 through 32 {
+    @keyframes floating-#{$i} {
+        0% {left:-15rem; top:0rem; right:0rem; bottom:0rem;}
+        2% {left:-14rem; top:.2rem; right:0rem; bottom:0rem;}
+        4% {left:-13rem; top:.4rem; right:0rem; bottom:0rem;}
+        6% {left:-12rem; top:.6rem; right:0rem; bottom:0rem;}
+        8% {left:-11rem; top:.8rem; right:0rem; bottom:0rem;}
+        10% {left:-10rem; top:1rem; right:0rem; bottom:0rem;}
+        12% {left:-9rem; top:.8rem; right:0rem; bottom:0rem;}
+        14% {left:-8rem; top:.6rem; right:0rem; bottom:0rem;}
+        16% {left:-7rem; top:.4rem; right:0rem; bottom:0rem;}
+        18% {left:-6rem; top:.2rem; right:0rem; bottom:0rem;}
+        20% {left:-5rem; top:0rem; right:0rem; bottom:0rem;}
+        22% {left:-4rem; top:0rem; right:0rem; bottom:.2rem;}
+        24% {left:-3rem; top:0rem; right:0rem; bottom:.4rem;}
+        26% {left:-2rem; top:0rem; right:0rem; bottom:.6rem;}
+        28% {left:-1rem; top:0rem; right:0rem; bottom:.8rem;}
+        30% {left:0rem; top:0rem; right:0rem; bottom:1rem;}
+        32% {left:1rem; top:0rem; right:0rem; bottom:.8rem;}
+        34% {left:2rem; top:0rem; right:0rem; bottom:.6rem;}
+        36% {left:3rem; top:0rem; right:0rem; bottom:.4rem;}
+        38% {left:4rem; top:0rem; right:0rem; bottom:.2rem;}
+        40% {left:5rem; top:0rem; right:0rem; bottom:0rem;}
+        42% {left:6rem; top:.2rem; right:0rem; bottom:0rem;}
+        44% {left:7rem; top:.4rem; right:0rem; bottom:0rem;}
+        46% {left:8rem; top:.6rem; right:0rem; bottom:0rem;}
+        48% {left:9rem; top:.8rem; right:0rem; bottom:0rem;}
+        50% {left:10rem; top:1rem; right:0rem; bottom:0rem;}
+        52% {left:11rem; top:.8rem; right:0rem; bottom:0rem;}
+        54% {left:12rem; top:.6rem; right:0rem; bottom:0rem;}
+        56% {left:13rem; top:.4rem; right:0rem; bottom:0rem;}
+        58% {left:14rem; top:.2rem; right:0rem; bottom:0rem;}
+        60% {left:15rem; top:0rem; right:0rem; bottom:0rem;}
+        62% {left:16rem; top:0rem; right:0rem; bottom:.2rem;}
+        64% {left:17rem; top:0rem; right:0rem; bottom:.4rem;}
+        66% {left:18rem; top:0rem; right:0rem; bottom:.6rem;}
+        68% {left:19rem; top:0rem; right:0rem; bottom:.8rem;}
+        70% {left:20rem; top:0rem; right:0rem; bottom:1rem;}
+        72% {left:22rem; top:0rem; right:0rem; bottom:.8rem;}
+        74% {left:23rem; top:0rem; right:0rem; bottom:.6rem;}
+        76% {left:24rem; top:0rem; right:0rem; bottom:.4rem;}
+        78% {left:25rem; top:0rem; right:0rem; bottom:.2rem;}
+        80% {left:26rem; top:0rem; right:0rem; bottom:0rem;}
+        82% {left:27rem; top:.2rem; right:0rem; bottom:0rem;}
+        84% {left:28rem; top:.4rem; right:0rem; bottom:0rem;}
+        86% {left:29rem; top:.6rem; right:0rem; bottom:0rem;}
+        88% {left:30rem; top:.8rem; right:0rem; bottom:0rem;}
+        90% {left:31rem; top:1rem; right:0rem; bottom:0rem;}
+        92% {left:32rem; top:.8rem; right:0rem; bottom:0rem;}
+        94% {left:33rem; top:.6rem; right:0rem; bottom:0rem;}
+        96% {left:34rem; top:.4rem; right:0rem; bottom:0rem;}
+        98% {left:35rem; top:.2rem; right:0rem; bottom:0rem;}
+        100% {opacity:0; left:36rem; top:0rem; right:0rem; bottom:0rem;}
+    }
+    .firefly-#{$i} {
+        position: relative;
+        animation-name: floating-#{$i};
+        animation-duration: 6s;
+        animation-delay: -#{$i}s;
+        animation-iteration-count: infinite;
+    }
+}

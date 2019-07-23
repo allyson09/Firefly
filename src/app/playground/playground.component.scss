@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+$tablet: 450px;
+$desktop: 840px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+header {
+    a {
+        font-size: 3rem;
+        margin-left: .3em;
+        color: white;
+
+        @include tablet {
+            font-size: 3.5rem;
+        }
+    }
+}
+main {
+    height: 33rem;
+    display: flex;
+    justify-content: center;
+
+    section#currentGame {
+        margin: 0;
+        position: relative;
+    }
+}

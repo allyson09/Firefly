@@ -1,0 +1,22 @@
+<header>
+  <h2 (click)="test()">The Meadow</h2>
+</header>
+<main>
+  <section class="dropdown">
+    <button class="btn btn-outline-info dropdown-toggle" type="button" id="menuToggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </section>
+  <section id="fireflies" *ngFor="let firefly of fireflies">
+    <img src="../../assets/images/fireflies/{{firefly.image}}" class="fireflies" alt="bloop">
+  </section>
+  <section id="jarArea">
+    <img id="jar" src="../../assets/images/meadow/bigJar.png">
+  </section>
+  <span (click)="logout()">logout</span>
+</main>

@@ -1,0 +1,19 @@
+<header>
+  <h1 id="title">Remember</h1>
+</header>
+<main>
+  <section id="game">
+    <div id="fireflies">
+      <img (click)="fireflyClicked(id=1,'cyan')" [ngClass]="{'singing': showAnswer === 1}" class="fireflies firefly-1" id="1" src="../../../assets/images/fireflies/cyan.png" alt="bloop">
+      <img (click)="fireflyClicked(id=2,'green')" [ngClass]="{'singing': showAnswer === 2}" class="fireflies firefly-2" id="2" src="../../../assets/images/fireflies/green.png" alt="bloop">
+      <img (click)="fireflyClicked(id=3,'violet')" [ngClass]="{'singing': showAnswer === 3}" class="fireflies firefly-3" id="3" src="../../../assets/images/fireflies/violet.png" alt="bloop">
+      <img (click)="fireflyClicked(id=4,'yellow')" [ngClass]="{'singing': showAnswer === 4}" class="fireflies firefly-4" id="4" src="../../../assets/images/fireflies/yellow.png" alt="bloop">
+    </div>
+    <div *ngIf="gameStarted">
+      <button type="button" class="btn btn-outline-info" (click)="stop()">Stop</button>
+    </div>
+    <div *ngIf="!gameStarted">
+      <button type="button" class="btn btn-outline-info" (click)="start()">Start</button>
+    </div>
+  </section>
+</main>

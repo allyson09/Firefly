@@ -1,0 +1,102 @@
+@keyframes resting {
+    0% {left:0rem; top:0rem; right:0rem; bottom:0rem;}
+    25% {left:.2rem; top:0rem; right:0rem; bottom:.2rem;}
+    50% {left:.4rem; top:0rem; right:0rem; bottom:0rem;}
+    75% {left:.2rem; top:.2rem; right:0rem; bottom:0rem;}
+    100% {left:0rem; top:0rem; right:0rem; bottom:0rem;}
+}
+@keyframes singing {
+    0% {opacity:1;}
+    50% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes gameTitle {
+    0% {opacity:.5;}
+    50% {opacity:.8;}
+    100% {opacity:.5;}
+}
+
+$tablet: 450px;
+$desktop: 840px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+header {
+    h1 {
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        position: relative;
+        animation-name: gameTitle;
+        animation-duration: 5s;
+        animation-delay: -3s;
+        animation-iteration-count: infinite;
+        margin-top: 5rem;
+
+        @include tablet {
+            font-size: 2.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        @include desktop {
+            margin-bottom: 5rem;
+        }
+    }
+}
+main {
+    section#game {
+        width: 100%;
+        text-align: center;
+    }
+}
+div#fireflies {
+    @include tablet {
+        width: 25rem;
+    }
+    @include desktop {
+        width: 100%;
+    }
+    @for $i from 1 through 4 {
+        .firefly-#{$i} {
+            position: relative;
+            animation-name: resting;
+            animation-duration: 6s;
+            animation-delay: -#{$i}s;
+            animation-iteration-count: infinite;
+        }
+    }
+    .fireflies {
+        width: 7rem;
+        margin: 1.1rem;
+        cursor: pointer;
+
+        @include tablet {
+            width: 9rem;
+        }
+        @include desktop {
+            width: 10rem;
+        }
+    }
+    .singing {
+        animation-name: singing;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+    }
+}
+button {
+    @include tablet {
+        width: 6rem;
+        height: 3rem;
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+}

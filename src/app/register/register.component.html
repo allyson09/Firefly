@@ -1,0 +1,35 @@
+<main>
+  <img id="firefly" src="../../../assets/images/fireflies/white.png" alt="bloop">
+  <form #userForm="ngForm" (ngSubmit)="register(userForm)">
+    <section id="username" [ngClass]="{'showSection': sectionStatuses.username === 'current', 'finishedStep': sectionStatuses.username === 'finished'}">
+      <h3>Oh hello there, what's your name?</h3>
+      <div id="usernameFormGroup" class="form-group">
+        <input type="text" class="form-control" id="usernameInput" placeholder="username" name="username" #username="ngModel" required [(ngModel)]="regForm.username">
+      </div>
+      <button (click)="nextSection('username')" type="button" class="btn btn-outline-info">Next</button>
+    </section>
+    <section id="birthday" [ngClass]="{'showSection': sectionStatuses.birthday === 'current', 'finishedStep': sectionStatuses.birthday === 'finished'}">
+      <h3>{{regForm.username}}, that's a nice name. When's your birthday?</h3>
+      <input type="date" class="form-control" id="birthdayInput" placeholder="birthday" name="birthday" #birthday="ngModel" required [(ngModel)]="regForm.birthday">
+      <button (click)="previousSection('birthday')" type="button" class="btn btn-outline-info">Previous</button>
+      <button (click)="nextSection('birthday')" type="button" class="btn btn-outline-info">Next</button>
+    </section>
+    <section id="login" [ngClass]="{'showSection': sectionStatuses.login === 'current', 'finishedStep': sectionStatuses.login === 'finished'}">
+      <h3>It was nice talking with you, lets keep in touch</h3>
+      <div id="emailFormGroup" class="form-group">
+        <label for="emailInput">Email<span class="regErrors">{{regErrors.email}}</span></label>
+        <input type="text" class="form-control" id="emailInput" name="email" #email="ngModel" required [(ngModel)]="regForm.email">
+      </div>
+      <div id="passwordFormGroup" class="form-group">
+        <label for="passwordInput">Password<span class="regErrors">{{regErrors.password}}</span></label>
+        <input type="password" class="form-control" id="passwordInput" name="password" #password="ngModel" required [(ngModel)]="regForm.password">
+      </div>
+      <div id="confirmPasswordFormGroup" class="form-group">
+        <label for="confirmPasswordInput">Confirm Password<span class="regErrors">{{regErrors.password}}</span></label>
+        <input type="password" class="form-control" id="confirmPasswordInput" name="passCheck" #passCheck="ngModel" required [(ngModel)]="regForm.passCheck">
+      </div>
+      <button (click)="previousSection('login')" type="button" class="btn btn-outline-info">Previous</button>
+      <button type="submit" class="btn btn-outline-info">Submit</button>
+    </section>
+  </form>
+</main>

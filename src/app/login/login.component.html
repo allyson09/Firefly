@@ -1,0 +1,69 @@
+<main>
+  <section id="fireflies">
+    <img class="fireflies firefly-1" id="1" src="../../../assets/images/fireflies/cyan.png" alt="bloop">
+    <img class="fireflies firefly-2" id="2" src="../../../assets/images/fireflies/green.png" alt="bloop">
+    <img class="fireflies firefly-3" id="3" src="../../../assets/images/fireflies/violet.png" alt="bloop">
+    <img class="fireflies firefly-4" id="4" src="../../../assets/images/fireflies/yellow.png" alt="bloop">
+    <img class="fireflies firefly-5" id="5" src="../../../assets/images/fireflies/orange.png" alt="bloop">
+    <img class="fireflies firefly-6" id="6" src="../../../assets/images/fireflies/blue.png" alt="bloop">
+    <img class="fireflies firefly-7" id="7" src="../../../assets/images/fireflies/pink.png" alt="bloop">
+    <img class="fireflies firefly-8" id="8" src="../../../assets/images/fireflies/white.png" alt="bloop">
+    <img class="fireflies firefly-9" id="9" src="../../../assets/images/fireflies/purple.png" alt="bloop">
+    <img class="fireflies firefly-10" id="10" src="../../../assets/images/fireflies/cyan.png" alt="bloop">
+    <img class="fireflies firefly-11" id="11" src="../../../assets/images/fireflies/green.png" alt="bloop">
+    <img class="fireflies firefly-12" id="12" src="../../../assets/images/fireflies/violet.png" alt="bloop">
+    <img class="fireflies firefly-13" id="13" src="../../../assets/images/fireflies/yellow.png" alt="bloop">
+    <img class="fireflies firefly-14" id="14" src="../../../assets/images/fireflies/orange.png" alt="bloop">
+    <img class="fireflies firefly-15" id="15" src="../../../assets/images/fireflies/pink.png" alt="bloop">
+    <img class="fireflies firefly-16" id="16" src="../../../assets/images/fireflies/white.png" alt="bloop">
+    <img class="fireflies firefly-17" id="17" src="../../../assets/images/fireflies/cyan.png" alt="bloop">
+    <img class="fireflies firefly-18" id="18" src="../../../assets/images/fireflies/green.png" alt="bloop">
+    <img class="fireflies firefly-19" id="19" src="../../../assets/images/fireflies/violet.png" alt="bloop">
+    <img class="fireflies firefly-20" id="20" src="../../../assets/images/fireflies/yellow.png" alt="bloop">
+    <img class="fireflies firefly-21" id="21" src="../../../assets/images/fireflies/orange.png" alt="bloop">
+    <img class="fireflies firefly-22" id="22" src="../../../assets/images/fireflies/blue.png" alt="bloop">
+    <img class="fireflies firefly-23" id="23" src="../../../assets/images/fireflies/pink.png" alt="bloop">
+    <img class="fireflies firefly-24" id="24" src="../../../assets/images/fireflies/white.png" alt="bloop">
+    <img class="fireflies firefly-25" id="25" src="../../../assets/images/fireflies/purple.png" alt="bloop">
+    <img class="fireflies firefly-26" id="26" src="../../../assets/images/fireflies/cyan.png" alt="bloop">
+    <img class="fireflies firefly-27" id="27" src="../../../assets/images/fireflies/green.png" alt="bloop">
+    <img class="fireflies firefly-28" id="28" src="../../../assets/images/fireflies/violet.png" alt="bloop">
+    <img class="fireflies firefly-29" id="29" src="../../../assets/images/fireflies/yellow.png" alt="bloop">
+    <img class="fireflies firefly-30" id="30" src="../../../assets/images/fireflies/orange.png" alt="bloop">
+    <img class="fireflies firefly-31" id="31" src="../../../assets/images/fireflies/pink.png" alt="bloop">
+    <img class="fireflies firefly-32" id="32" src="../../../assets/images/fireflies/white.png" alt="bloop">
+  </section>
+  <header>
+    <h1 data-toggle="modal" data-target="#loginModal">Firefly</h1>
+  </header>
+</main>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form #userForm="ngForm" (ngSubmit)="login(userForm)">
+        <div class="modal-body">
+          <div id="emailFormGroup" class="inputRow form-group">
+            <label for="emailInput">Email<span class="loginErrors">{{loginErrors.userNotFound}}</span></label>
+            <input type="text" class="inputs form-control" id="emailInput" name="email" #email="ngModel" required [(ngModel)]="loginForm.email">
+          </div>
+          <div id="passwordFormGroup" class="inputRow form-group">
+            <label for="passwordInput">Password<span class="loginErrors">{{loginErrors.wrongPassword}}</span></label>
+            <input type="password" class="inputs form-control" id="passwordInput" name="password" #password="ngModel" required [(ngModel)]="loginForm.password">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <span><a href="/register">register</a></span>
+          <span><a (click)="logout()" href="#">logout</a></span>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
