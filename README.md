@@ -1,27 +1,16 @@
 # Firefly
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
+Firefly is a meditative mini game site that helps the user to relax and or focus. The mini games are pattern puzzles that the user must complete by clicking orbs of light (fireflies) which release music notes building chords that begin to resolve. After three games are completed in a day a firefly joins the user's meadow page containing its own note. The fireflies will sing when they are dragged into the users' glass jar.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Desktop Images
+![alt text](https://res.cloudinary.com/allyson09/image/upload/v1565178155/FireflyHome.png "Home Page")
+***
+![alt text](https://res.cloudinary.com/allyson09/image/upload/v1565178155/FireflyLogin.png "Login")
+***
+![alt text](https://res.cloudinary.com/allyson09/image/upload/v1565178155/FireflyGame.png "Game")
+***
+#### Mobile Images
+<img src="https://res.cloudinary.com/allyson09/image/upload/v1565178155/GameMobile.png" width="25%">
+<img src="https://res.cloudinary.com/allyson09/image/upload/v1565178155/FireflyReg1Mobile.png" width="25%">
+<img src="https://res.cloudinary.com/allyson09/image/upload/v1565178155/FireflyReg2Mobile.png" width="25%">
+<img src="https://res.cloudinary.com/allyson09/image/upload/v1565178155/MeadowMobile.png" width="25%">
